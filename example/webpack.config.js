@@ -19,8 +19,12 @@ module.exports = [
       filename: 'quantized-mesh-decoder.bundle.js'
     },
     devServer: {
-      contentBase: path.join(__dirname, './'),
-      publicPath: '/dist/'
+      static: {
+        directory: path.join(__dirname, './'),
+      },
+      devMiddleware: {
+        publicPath: '/dist/'
+      }
     },
     externals: {
       three: 'THREE'
@@ -35,15 +39,23 @@ module.exports = [
       filename: 'png-decoder.bundle.js'
     },
     devServer: {
-      contentBase: path.join(__dirname, './'),
-      publicPath: '/dist/'
+      static: {
+        directory: path.join(__dirname, './'),
+      },
+      devMiddleware: {
+        publicPath: '/dist/'
+      }
     },
     devtool: 'source-map'
   },
   {
     devServer: {
-      contentBase: path.join(__dirname, './'),
-      publicPath: '/dist/'
+      static: {
+        directory: path.join(__dirname, './'),
+      },
+      devMiddleware: {
+        publicPath: '/dist/'
+      }
     },
     devtool: 'source-map',
     entry: './src/app.js',

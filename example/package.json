@@ -4,8 +4,8 @@
   "description": "",
   "main": "./src/app.js",
   "scripts": {
-    "start": "webpack-dev-server -d",
-    "build": "webpack -p"
+    "start": "webpack serve",
+    "build": "webpack"
   },
   "keywords": [],
   "author": {
@@ -14,20 +14,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com:heremaps/harp-terrain-datasource.git"
+    "url": "git://github.com:lume/harp-terrain-datasource.git"
   },
   "license": "Apache-2.0",
   "devDependencies": {
     "copy-webpack-plugin": "^4.5.2",
-    "webpack": "^4.28.3",
-    "webpack-cli": "^3.3.0",
-    "webpack-dev-server": "^3.10.3"
+    "webpack": "^5.0.0",
+    "webpack-cli": "^5.0.0",
+    "webpack-dev-server": "^4.0.0"
   },
   "dependencies": {
     "@here/harp-geoutils": "^0.3.1",
     "@here/harp-map-controls": "^0.2.1",
     "@here/harp-mapview": "^0.8.1",
-    "@here/harp-terrain-datasource": "github:heremaps/harp-terrain-datasource",
+    "@here/harp-terrain-datasource": "github:lume/harp-terrain-datasource#82d30384c18867bff91918d212952d81c3f90f5e",
     "dat.gui": "^0.7.2",
     "three": "^0.102.0"
   },

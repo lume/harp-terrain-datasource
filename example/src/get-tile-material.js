@@ -21,7 +21,8 @@ function getTileTextureUrl (tile) {
   const textureTileKey = mercatorTilingScheme.getTileKey(tile.geoBox.center, tile.tileKey.level)
   const shard = Math.round(Math.random() * 3) + 1
 
-  return `https://${shard}.aerial.maps.api.here.com/maptile/2.1/basetile/newest/satellite.day/${textureTileKey.level}/${textureTileKey.column}/${textureTileKey.rowCount() - textureTileKey.row - 1}/512/png?app_id=${config.APP_ID}&app_code=${config.APP_CODE}`
+//   return `https://${shard}.aerial.maps.api.here.com/maptile/2.1/basetile/newest/satellite.day/${textureTileKey.level}/${textureTileKey.column}/${textureTileKey.rowCount() - textureTileKey.row - 1}/512/png?app_id=${config.APP_ID}&app_code=${config.APP_CODE}`
+  return `https://${shard}.aerial.maps.api.here.com/maptile/2.1/basetile/newest/satellite.day/${textureTileKey.level}/${textureTileKey.column}/${textureTileKey.rowCount() - textureTileKey.row - 1}/512/png?apiKey=${config.APP_CODE}`
 }
 
 function fetchTileTexture (tile) {
